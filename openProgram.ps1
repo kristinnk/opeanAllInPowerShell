@@ -1,5 +1,7 @@
 ipmo .\UIAutomation\UIAutomation.dll
 
+Hide-UiaCurrentHighlighter
+
 Start-Process 'C:\Program Files (x86)\Sublime Text 3\sublime_text.exe'
 $sublime = Get-UIAWindow -ProcessName sublime_text | Invoke-UIAWindowTransformResize -TransformResizeWidth 2560 -TransformResizeHeight 695;
 $sublime.Move(0, 720);

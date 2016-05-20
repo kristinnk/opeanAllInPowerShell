@@ -11,9 +11,8 @@ $chrome = Get-UIAWindow -ProcessName chrome | Invoke-UIAWindowTransformResize -T
 $chrome.Move(-1920, 846);
 
 Start-Process explorer C:\development
-# TODO : Virkar ekki, finna leið til að færa explorer glugga
-#$expl = Get-UIAWindow -ProcessName explorer | Invoke-UIAWindowTransformResize -TransformResizeWidth 1920 -TransformResizeHeight 1080;
-#$expl.Move(-1920, 846);
+$expl = Get-UIAWindow -ProcessName explorer | Invoke-UIAWindowTransformResize -TransformResizeWidth 1280 -TransformResizeHeight 720 | Invoke-UiaWindowTransformMove -TransformMoveX 0 -TransformMoveY 0;
+$expl.Move(-1920, 846);
 
 Start-Process powershell
 $powersh = Get-UIAWindow -ProcessName powershell | Invoke-UIAWindowTransformResize -TransformResizeWidth 1280 -TransformResizeHeight 720;
